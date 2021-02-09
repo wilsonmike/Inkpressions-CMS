@@ -3,3 +3,9 @@
     height: 400px;
     background-color: #F8F9FA;
 }
+.card-group {
+    margin-top: 50px; 
+}
+.card {
+    border: none; 
+}
