@@ -16,4 +16,7 @@ export class Inkpressions {
   getDirtLabel = (): any => {
     return this.http.get(`${this.baseUrl}`);
   }
+  getDirtLabelNoLineItems = (): any => {
+    return this.http.get(`${this.baseUrl}/distinct`);
+  }
 }
