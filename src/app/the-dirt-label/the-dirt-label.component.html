@@ -1,1 +1,26 @@
-<p>the-dirt-label works!</p>
+<app-mainnav></app-mainnav>
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Order Number</th>
+    <th scope="col">Shipping Cost Amount</th>
+    <th scope="col">Number of Line Items</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let orders of ink; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      {{ orders.ordernumber }}
+    </td>
+    <td>
+        {{ orders.amountshippingcost }}
+      </td>
+    <td>{{ ink.area | number }}</td>
+    <td>{{ ink.population | number }}</td>
+  </tr>
+  </tbody>
+</table>
