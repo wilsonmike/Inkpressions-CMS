@@ -12,4 +12,14 @@ ink.get("/", (req, res) => {
     });
   });
 
+  ink.get("/distinct", (req, res) => {
+    let query = `select distinct on (ordernumber) * from dlabelcombinednew`;
+    pool.query(query).then((response) => {
+      res.json(response.rows);
+    });
+  });
+
+
+  
+
 module.exports = ink;
