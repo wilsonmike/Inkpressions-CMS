@@ -11,6 +11,7 @@ import { summaryFileName } from '@angular/compiler/src/aot/util';
 export class TheDirtLabelComponent implements OnInit {
   ink: any = [];
   dataNli: any = [];
+  shippingTotal: any = '';
 
   constructor(private service: Inkpressions, private route: ActivatedRoute) { }
 
@@ -29,7 +30,7 @@ export class TheDirtLabelComponent implements OnInit {
         // tslint:disable-next-line:radix
         this.dataNli.forEach((a: { amountshippingcost: any; }) => sum += parseFloat(a.amountshippingcost));
         console.log(sum.toFixed(2));
-
+        this.shippingTotal = sum.toFixed(2);
       });
     };
     getDirtLabel();
