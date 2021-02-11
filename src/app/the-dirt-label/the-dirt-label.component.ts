@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Inkpressions } from '../inkpressions.service';
 import { ActivatedRoute } from '@angular/router';
+import { summaryFileName } from '@angular/compiler/src/aot/util';
 
 @Component({
   selector: 'app-the-dirt-label',
@@ -23,7 +24,12 @@ export class TheDirtLabelComponent implements OnInit {
     const getDirtLabelNoLineItems = () => {
       this.service.getDirtLabelNoLineItems().subscribe((response: any) => {
         this.dataNli = response;
-        console.log(this.ink);
+        console.log(this.dataNli);
+        let sum = 0;
+        // tslint:disable-next-line:radix
+        this.dataNli.forEach((a: { amountshippingcost: any; }) => sum += parseFloat(a.amountshippingcost));
+        console.log(sum.toFixed(2));
+
       });
     };
     getDirtLabel();
