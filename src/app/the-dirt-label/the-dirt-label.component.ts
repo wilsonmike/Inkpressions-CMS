@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TheDirtLabelComponent implements OnInit {
   ink: any = [];
+  dataNli: any = [];
 
   constructor(private service: Inkpressions, private route: ActivatedRoute) { }
 
@@ -19,6 +20,13 @@ export class TheDirtLabelComponent implements OnInit {
         console.log(this.ink);
       });
     };
+    const getDirtLabelNoLineItems = () => {
+      this.service.getDirtLabelNoLineItems().subscribe((response: any) => {
+        this.dataNli = response;
+        console.log(this.ink);
+      });
+    };
     getDirtLabel();
+    getDirtLabelNoLineItems();
   }
 }

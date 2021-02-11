@@ -32,6 +32,36 @@
   </tbody>
 </table>
 <p>Data No Line Items</p>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Order Number</th>
+      <th scope="col">Order Number (Line Items)</th>
+      <th scope="col">Shipping Cost Amount</th>
+      <th scope="col">Number of Line Items</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">SKU</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let filtered of dataNli; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+          {{filtered.ordernumber}}
+      </td>
+      <td>
+        {{ filtered.ordernumberlineitems }}
+      </td>
+      <td>
+          {{ filtered.amountshippingcost }}
+        </td>
+      <td>{{ filtered.countnumberoflineitems }}</td>
+      <td>{{ filtered.quantity}}</td>
+      <td>{{ filtered.sku }}</td>
+    </tr>
+    </tbody>
+  </table>
 <div class="shipping">
     <p>Total Shipping: </p>
 </div>
