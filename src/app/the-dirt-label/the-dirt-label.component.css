@@ -1,4 +1,4 @@
-.data-dl {
+/* .data-dl {
     display: flex;
     width: 100%;
 }
@@ -29,4 +29,15 @@
   }
   .shipping {
       margin: 30px 10px;
-  }
+  }  */
+ 
+.collapse1{
+    overflow-y:scroll;
+    height:400px;
+}
+.toptable {
+    margin: 30px 0;
+}
+.bottomtable {
+    margin: 30px 0;
+}

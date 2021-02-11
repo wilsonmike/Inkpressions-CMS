@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { MDBBootstrapModule } from 'angular-bootstrap-md'; 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TheDirtLabelComponent } from './the-dirt-label/the-dirt-label.component';

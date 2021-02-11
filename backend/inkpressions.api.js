@@ -5,8 +5,7 @@ const ink = express.Router();
 const pool = require("./connection");
 
 ink.get("/", (req, res) => {
-    let query = `SELECT * FROM dlabelcombinednew   
-  ORDER BY ORDERNUMBER`;
+    let query = `SELECT * FROM dirtlabelcleanpricing`;
     pool.query(query).then((response) => {
       res.json(response.rows);
     });
