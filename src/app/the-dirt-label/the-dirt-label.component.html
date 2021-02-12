@@ -1,86 +1,103 @@
 <app-mainnav></app-mainnav>
-<div class="collapse1 toptable">
-    <table class="table table-striped w-auto">
-        <thead>
-          <tr>
-            <th *ngFor="let head of headElements" scope="col">{{head}} </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr mdbTableCol *ngFor="let item of ink">
-            <th scope="row">{{item.ordernumber}}</th>
-            <td>{{item.orderid}}</td>
-            <td>{{item.orderitemid}}</td>
-            <td>{{item.lineitemquantity}}</td>
-            <td>{{item.sku}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.shipdate}}</td>
-            <td>{{item.id}}</td>
-            <td>{{item.store}}</td>
-            <td>{{item.variantsku}}</td>
-            <td>{{item.shipstationitemtitle}}</td>
-            <td>{{item.len}}</td>
-            <td>{{item.type}}</td>
-            <td>{{item.designfilename}}</td>
-            <td>{{item.brand}}</td>
-            <td>{{item.style}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.weightoz}}</td>
-            <td>{{item.color}}</td>
-            <td>{{item.size}}</td>
-            <td>{{item.vinylcolor1}}</td>
-            <td>{{item.vinylcolor2}}</td>
-            <td>{{item.price}}</td>
-            <td>{{item.sewntag}}</td>
-            <td>{{item.oldsizetag}}</td>
-            <td>{{item.totaldecorationprice}}</td>
-            <td>{{item.bag}}</td>
-            <td>{{item.totalprice}}</td>
-            <td>{{item.shipdomestic}}</td>
-            <td>{{item.addlitemsdomes}}</td>
-            <td>{{item.expediteddomestic}}</td>
-            <td>{{item.additemsexpedited}}</td>
-            <td>{{item.shipintl}}</td>
-            <td>{{item.additemsintl}}</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-
-<p>Data No Line Items</p>
-<div class="collapse1 bottomtable">
-    <table class="table table-striped w-auto">
-        <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Order Number</th>
-          <th scope="col">Order Number (Line Items)</th>
-          <th scope="col">Shipping Cost Amount</th>
-          <th scope="col">Number of Line Items</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">SKU</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let filtered of dataNli; index as i">
-          <th scope="row">{{ i + 1 }}</th>
-          <td>
-              {{filtered.ordernumber}}
-          </td>
-          <td>
-            {{ filtered.ordernumberlineitems }}
-          </td>
-          <td>
-              {{ filtered.amountshippingcost }}
-            </td>
-          <td>{{ filtered.countnumberoflineitems }}</td>
-          <td>{{ filtered.quantity}}</td>
-          <td>{{ filtered.sku }}</td>
-        </tr>
-        </tbody>
-      </table>
-</div>
-
-<div class="shipping">
-    <h5>Total Shipping: ${{shippingTotal}} </h5>
+<div class="my-container">
+    <div class="main-bg">
+        <h3 class="branding-tdl">The Dirt Label</h3>
+        <div class="centering">
+            <div class="collapse1 toptable">
+                <p>Raw Data - All Line Items</p>
+                <table class="table table-striped w-auto">
+                    <thead>
+                      <tr>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr mdbTableCol *ngFor="let item of ink">
+                        <!-- <th scope="row">{{item.ordernumber}}</th> -->
+                        <td>{{item.shipmentid}}</td>
+                        <td>{{item.orderid}}</td>
+                        <td>{{item.ordernumber}}</td>
+                        <td>{{item.sku}}</td>
+                        <td>{{item.itemdescription}}</td>
+                        <td>{{item.unitprice}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.extendedprice}}</td>
+                        <td>{{item.shipdate}}</td>
+                        <td>{{item.storename}}</td>
+                        <td>{{item.carrier}}</td>
+                        <td>{{item.provider}}</td>
+                        <td>{{item.service}}</td>
+                        <td>{{item.trackingnumber}}</td>
+                        <td>{{item.warehouse}}</td>
+                        <td>{{item.id}}</td>
+                        <td>{{item.store}}</td>
+                        <td>{{item.variantsku}}</td>
+                        <td>{{item.shipstationitemtitle}}</td>
+                        <td>{{item.len}}</td>
+                        <td>{{item.Type}}</td>
+                        <td>{{item.designfilename}}</td>
+                        <td>{{item.brand}}</td>
+                        <td>{{item.Style}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.weightoz}}</td>
+                        <td>{{item.color}}</td>
+                        <td>{{item.Size}}</td>
+                        <td>{{item.vinylcolor1}}</td>
+                        <td>{{item.vinylcolor2}}</td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.sewntag}}</td>
+                        <td>{{item.oldsizetag}}</td>
+                        <td>{{item.totaldecorationprice}}</td>
+                        <td>{{item.bag}}</td>
+                        <td>{{item.totalprice}}</td>
+                        <td>{{item.shipdomestic}}</td>
+                        <td>{{item.addlitemsdomestic}}</td>
+                        <td>{{item.expediteddomestic}}</td>
+                        <td>{{item.addlitemsexpedited}}</td>
+                        <td>{{item.shipintl}}</td>
+                        <td>{{item.addlitemsintl}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <p>Data No Line Items</p>
+            <div class="collapse1 bottomtable">
+                <table class="table table-striped w-auto">
+                    <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Order Number</th>
+                      <th scope="col">Order Number (Line Items)</th>
+                      <th scope="col">Shipping Cost Amount</th>
+                      <th scope="col">Number of Line Items</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">SKU</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let filtered of dataNli; index as i">
+                      <th scope="row">{{ i + 1 }}</th>
+                      <td>
+                          {{filtered.ordernumber}}
+                      </td>
+                      <td>
+                        {{ filtered.ordernumberlineitems }}
+                      </td>
+                      <td>
+                          {{ filtered.amountshippingcost }}
+                        </td>
+                      <td>{{ filtered.countnumberoflineitems }}</td>
+                      <td>{{ filtered.quantity}}</td>
+                      <td>{{ filtered.sku }}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+            </div>
+            
+            <div class="shipping">
+                <h5>Total Shipping: ${{shippingTotal}} </h5>
+            </div>
+            </div>
+    
 </div>

@@ -12,7 +12,8 @@ export class TheDirtLabelComponent implements OnInit {
   ink: any = [];
   dataNli: any = [];
   shippingTotal: any = '';
-  headElements = ['Order Number', 'Order ID', 'Order Item ID', 'Line Item Quantity', 'SKU', 'Description', 'Ship Date', 'ID', 'Store' , 'Variant SKU', 'ShipStation Item Title', 'Len', 'Type', 'Design File Name', 'Brand', 'Style', 'Description Item', 'Weight Oz', 'Color', 'Size', 'Vinylcolor1', 'Vinylcolor2', 'Price', 'Sewn Tag', 'Old Size Tag', 'Total Decoration Price', 'Bag', 'Total Price', 'Ship Domestic', 'Additional Items Domestic', 'Expedited Domestic', 'Additional Items Expedited', 'Ship International', 'Additional Items International'];
+  // tslint:disable-next-line:max-line-length
+  headElements = ['Shipment ID', 'Order ID', 'Order Number', 'SKU', 'Item Description', 'Unit Price', 'Quantity', 'Extended Price', 'Ship Date' , 'Store Name', 'Carrier', 'Provider', 'Service', 'Tracking Number', 'Warehouse', 'ID', 'Store', 'Variant SKU', 'Shipstation Item Title', 'Length', 'Type', 'Design File Name', 'Brand', 'Style', 'Description', 'Weight Oz', 'Color', 'Size', 'Vinyl Color 1', 'Vinyl Color 2', 'Price', 'Sewn Tag', 'Old Size Tag', 'Total Decoration Price', 'Bag', 'Total Price', 'Ship Domestic', 'Additional Items Domestic', 'Expedited Domestic', 'Additional Items Expedited', 'Ship International', 'Additional Items International'];
 
   constructor(private service: Inkpressions, private route: ActivatedRoute) { }
 

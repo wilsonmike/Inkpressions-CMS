@@ -1,4 +1,18 @@
 .brand-logo {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 120px;
+    margin-right: 40px;
+}
+.blue-banner {
+    width: 100%;
+    background-color: #13A89E;
+    height: 20px;
+}
+.navbar {
+    background-color: white;
+}
+.navbar-collapse {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 15px;
 }

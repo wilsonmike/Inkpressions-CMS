@@ -4,8 +4,22 @@
     background-color: #F8F9FA;
 }
 .card-group {
-    margin-top: 50px; 
 }
 .card {
     border: none; 
 }
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .card-title {
+      font-weight: bold;
+  }
+  .my-container {
+      background-color: #F3F3F3;
+  }
+  .card {
+      margin: 30px;
+  }
