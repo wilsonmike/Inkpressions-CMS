@@ -66,30 +66,47 @@
                 <table class="table table-striped w-auto">
                     <thead>
                     <tr>
-                      <th scope="col">#</th>
+                      <th scope="col">Ship Date</th>
+                      <th scope="col">Recipient</th>
                       <th scope="col">Order Number</th>
-                      <th scope="col">Order Number (Line Items)</th>
-                      <th scope="col">Shipping Cost Amount</th>
-                      <th scope="col">Number of Line Items</th>
-                      <th scope="col">Quantity</th>
-                      <th scope="col">SKU</th>
+                      <th scope="col">Provider</th>
+                      <th scope="col">Service</th>
+                      <th scope="col">Package</th>
+                      <th scope="col">Items</th>
+                      <th scope="col">Zone</th>
+                      <th scope="col">Shipping Paid</th>
+                      <th scope="col">Shipping Cost</th>
+                      <th scope="col">Insurance Cost</th>
+                      <th scope="col">Weight</th>
+                      <th scope="col">Weight Unit</th>
+                      <th scope="col">Store</th>
+                      <th scope="col">Total Cost</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr *ngFor="let filtered of dataNli; index as i">
                       <th scope="row">{{ i + 1 }}</th>
                       <td>
-                          {{filtered.ordernumber}}
+                          {{filtered.shipdate}}
                       </td>
                       <td>
-                        {{ filtered.ordernumberlineitems }}
+                        {{ filtered.recipient }}
                       </td>
                       <td>
-                          {{ filtered.amountshippingcost }}
+                          {{ filtered.ordernumber }}
                         </td>
-                      <td>{{ filtered.countnumberoflineitems }}</td>
-                      <td>{{ filtered.quantity}}</td>
-                      <td>{{ filtered.sku }}</td>
+                      <td>{{ filtered.provider }}</td>
+                      <td>{{ filtered.service}}</td>
+                      <td>{{ filtered.package }}</td>
+                      <td>{{ filtered.items }}</td>
+                      <td>{{ filtered.zone }}</td>
+                      <td>{{ filtered.shippingpaid }}</td>
+                      <td>{{ filtered.shippingcost }}</td>
+                      <td>{{ filtered.insurancecost }}</td>
+                      <td>{{ filtered.weight }}</td>
+                      <td>{{ filtered.weightunit }}</td>
+                      <td>{{ filtered.store }}</td>
+                      <td>{{ filtered.totalcost }}</td>
                     </tr>
                     </tbody>
                   </table>
